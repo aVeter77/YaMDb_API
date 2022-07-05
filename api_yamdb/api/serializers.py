@@ -36,8 +36,8 @@ def send_mail_token(user):
     """Отправка кода подтверждения на почту"""
 
     token = default_token_generator.make_token(user)
-    EMAIL_MESSAGE = EMAIL_LOGIN + user.username + EMAIL_TOKEN + token
-    send_mail(EMAIL_SUBJECT, EMAIL_MESSAGE, DEFAULT_FROM_EMAIL, (user.email,))
+    email_message = EMAIL_LOGIN + user.username + EMAIL_TOKEN + token
+    send_mail(EMAIL_SUBJECT, email_message, DEFAULT_FROM_EMAIL, (user.email,))
 
 
 def check_username(data):

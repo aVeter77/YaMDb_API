@@ -2,6 +2,8 @@
 
 _Проект YaMDb собирает отзывы пользователей на различные произведения_
 
+![example workflow](https://github.com/aVeter77/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 Образ доступен на [Dockerhub](https://hub.docker.com/r/aveter77/api_yamdb/tags).
 ## Алгоритм регистрации пользователей
 1. Пользователь отправляет POST-запрос на добавление нового пользователя с параметрами `email` и `username` на эндпоинт `/api/v1/auth/signup/`.

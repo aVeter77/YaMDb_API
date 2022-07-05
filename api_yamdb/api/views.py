@@ -2,12 +2,7 @@ from django.contrib.auth.tokens import default_token_generator
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import (
-    filters,
-    generics,
-    mixins,
-    permissions,
-    status,
-    viewsets,
+    filters, generics, mixins, permissions, status, viewsets,
 )
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -17,15 +12,9 @@ from reviews.models import Category, Genre, Review, Title, User
 from .filters import TitleFilter
 from .permissions import AdminOnly, AdminOrReadOnly, AuthorOrHigher
 from .serializers import (
-    CategoriesSerializer,
-    CommentSerializer,
-    GenresSerializer,
-    GetTokenSerializer,
-    ReviewSerializer,
-    SendCodeSerializer,
-    TitlesAddSerializer,
-    TitlesSerializer,
-    UserAdminSerializer,
+    CategoriesSerializer, CommentSerializer, GenresSerializer,
+    GetTokenSerializer, ReviewSerializer, SendCodeSerializer,
+    TitlesAddSerializer, TitlesSerializer, UserAdminSerializer,
     UserEditMeSerializer,
 )
 
@@ -126,8 +115,7 @@ class UserViewPatchDelAdmin(generics.RetrieveUpdateDestroyAPIView):
     lookup_field = 'username'
 
     def get_queryset(self):
-        user = User.objects.filter(username=self.kwargs['username'])
-        return user
+        return User.objects.filter(username=self.kwargs['username'])
 
 
 class UserView(APIView):
