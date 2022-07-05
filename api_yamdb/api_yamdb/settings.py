@@ -1,9 +1,12 @@
 import os
+
 from datetime import timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.getenv('SECRET_KEY', default=None)
+SECRET_KEY = os.getenv(
+    'SECRET_KEY', default='p&l%38514wu6lhtyn^##a1)fkz@4zqj=rq&aazcf^##zgl9(vs'
+)
 
 DEBUG = False
 
@@ -59,7 +62,9 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
+        'ENGINE': os.getenv(
+            'DB_ENGINE', default='django.db.backends.postgresql'
+        ),
         'NAME': os.getenv('DB_NAME', default='postgres'),
         'USER': os.getenv('POSTGRES_USER', default='user'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='password'),
