@@ -4,6 +4,8 @@ _Проект YaMDb собирает отзывы пользователей н�
 
 ![example workflow](https://github.com/aVeter77/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+Пример работы приложения [http://130.193.54.197/redoc/](http://130.193.54.197/redoc/)
+
 Образ доступен на [Dockerhub](https://hub.docker.com/r/aveter77/api_yamdb/tags).
 ## Алгоритм регистрации пользователей
 1. Пользователь отправляет POST-запрос на добавление нового пользователя с параметрами `email` и `username` на эндпоинт `/api/v1/auth/signup/`.
@@ -47,7 +49,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 ## Заполнение базы начальными данными
 ```
 cd infra/
-cat fixtures.json | sudo docker exec -i <<container_id>> python manage.py loaddata --format=json -
+cat fixtures.json | sudo docker-compose exec web python manage.py loaddata --format=json -
 ```
 
 ## Примеры запросов
