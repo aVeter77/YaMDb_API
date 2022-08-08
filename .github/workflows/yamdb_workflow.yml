@@ -59,11 +59,11 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            cd docker/yamdb/
             sudo docker-compose stop
             sudo docker-compose rm web
             sudo systemctl stop nginx
-            sudo docker image rm ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
-            cd docker/yamdb/
+            sudo docker image rm -f ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
             rm .env
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
