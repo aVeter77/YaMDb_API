@@ -1,10 +1,10 @@
 # YaMDb API
 
-_Проект YaMDb собирает отзывы пользователей на различные произведения_
+Проект YaMDb собирает отзывы пользователей на различные произведения
 
 ![example workflow](https://github.com/aVeter77/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-Пример работы приложения [http://130.193.54.197/redoc/](http://130.193.54.197/redoc/)
+Пример работы приложения [http://yamdb.aveter77.site/redoc/](http://yamdb.aveter77.site/redoc/)
 
 Образ доступен на [Dockerhub](https://hub.docker.com/r/aveter77/api_yamdb/tags).
 ## Алгоритм регистрации пользователей
@@ -37,7 +37,7 @@ _Проект YaMDb собирает отзывы пользователей н�
 ### Docker
 ```
 cd infra/
-docker-compose -f docker-compose_image.yaml up -d
+docker-compose up -d
 ```
 После запуска выполните команды:
 ```
@@ -49,7 +49,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 ## Заполнение базы начальными данными
 ```
 cd infra/
-cat fixtures.json | sudo docker-compose exec web python manage.py loaddata --format=json -
+cat fixtures.json | docker-compose exec -T web python manage.py loaddata --format=json -
 ```
 
 ## Примеры запросов
