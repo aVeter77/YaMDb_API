@@ -4,9 +4,12 @@
 
 ![example workflow](https://github.com/aVeter77/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-Пример работы приложения [http://yamdb.aveter77.site/redoc/](http://yamdb.aveter77.site/redoc/)
+Полное описание API [http://yamdb.aveter77.site/redoc/](http://yamdb.aveter77.site/redoc/)
+
+Все эндпоинты [http://yamdb.aveter77.site/api/v1/](http://yamdb.aveter77.site/api/v1/)
 
 Образ доступен на [Dockerhub](https://hub.docker.com/r/aveter77/api_yamdb/tags).
+
 ## Алгоритм регистрации пользователей
 1. Пользователь отправляет POST-запрос на добавление нового пользователя с параметрами `email` и `username` на эндпоинт `/api/v1/auth/signup/`.
 2. YaMDB отправляет письмо с кодом подтверждения (`confirmation_code`) на адрес `email`.
