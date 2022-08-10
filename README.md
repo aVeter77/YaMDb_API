@@ -1,12 +1,12 @@
 # YaMDb API
 
-Проект YaMDb собирает отзывы пользователей на различные произведения
-
 ![example workflow](https://github.com/aVeter77/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
+Проект YaMDb собирает отзывы пользователей на различные произведения
 
 Полное описание API [http://yamdb.aveter77.site/redoc/](http://yamdb.aveter77.site/redoc/)
 
-Все эндпоинты [http://yamdb.aveter77.site/api/v1/](http://yamdb.aveter77.site/api/v1/)
+Эндпоинты [http://yamdb.aveter77.site/api/v1/](http://yamdb.aveter77.site/api/v1/)
 
 Образ доступен на [Dockerhub](https://hub.docker.com/r/aveter77/api_yamdb/tags).
 
